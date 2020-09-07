@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Document</title>
+	<link rel="stylesheet" href="/static/style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
+	<!-- <script src="jquery.min.js"></script> -->
+	<script src="/static/data.js"></script>
+	<script defer src="/static/main.js" ></script>
+</head>
+<body>
+	
+	
+<!-- каркас на чистом HTML
+	<input type="checkbox" class="custom-checkbox" id="happy1" name="happy" value="yes">
+	<label for="happy1">Happy</label>
+	<br><br>
+	<input type="checkbox" class="custom-checkbox" id="happy2" name="happy" value="yes">
+	<label for="happy2">Happy</label>
+	<br><br>
+	<input type="checkbox" class="custom-checkbox" id="happy3" name="happy" value="yes">
+	<label for="happy3">Happy</label>
+	<br><br>
+	<input type="checkbox" class="custom-checkbox" id="happy4" name="happy" value="yes">
+	<label for="happy4">Happy</label>
+ -->
+
+<!-- 	<div class="quiz-container">
+		<div class="quiz">
+			<div class="quiz__questions">
+				<div class="quiz__questions-header">
+					<h3 class="quiz__title">Квартиры напрямую от застройщиков в Москве и МО</h3>
+					<hr class="quiz__title-separator">
+					<div class="title quiz__question-title">
+						<span class="is-block">Какую квартиру Вы ищете?</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div> -->
+
+<!-- <div class="quiz">
+	<div id="quiz_questions">
+	</div>
+</div> -->
+
+<div class="quiz">
+	<div class="quiz-start active-question">
+		<!-- Стартовая страница -->
+		<div class="quiz-start-header">
+			<h3 class="quiz-start-title">Квартиры напрямую от застройщиков в Москве и МО</h3>
+			<button class="c-button" type="button" id="button-start">кнопка Start </button>
+<!-- 			<button class="c-button" type="button" id="button-start" onclick="alert(this.tagName.toLowerCase());">кнопка Start </button> -->
+			<!-- <button type="button" class="">просто кнопка</button> -->
+			
+			<!-- <input type="button" name="" id="" value="Тестовая кнопка input" /> -->
+			<!-- <a href="#" class="knopka">кнопка</a> -->
+			<input type="checkbox" name="technology" value="PHP" class="array-checked">
+			<input type="checkbox" name="technology" value="JS" class="array-checked">
+			<input type="checkbox" name="technology" value="CSS" class="array-checked">
+			<br>
+			<br>
+			<br>
+			<input type="checkbox" class="checkboxClass"> 
+			<br>
+			<input type="checkbox" class="checkboxClass">
+			
+			<input type="checkbox" id="example"> 
+			//onchange=isCheckedAnswers(t)>
+			
+			
+			<div id="parent-id">
+			    <p>hello word1</p>
+			    <p class="test">hello word2</p>
+			    <p>hello word3</p>
+			    <p>hello word4</p>
+			</div>
+
+			<form action="telegram.php" autocomplete="on" method="POST">
+				<div>
+					<p>Имя</p>
+					<input placeholder="Имя" type="text" name="user_name" value="">				
+				</div>
+				<div>
+					<p>Телефон</p>
+					<input placeholder="Телефон" type="tel" name="user_phone" value="">
+				</div>
+				<div>
+					<p>Эл. почта</p>
+					<input placeholder="Email" type="email" name="user_email" value="">
+				</div>
+				<br>
+				<label>
+					<input type="checkbox" checked> Я согласен с <a href="#">условиями использования</a>
+				</label>
+				<div>
+					<button type="submit">Отправить</button>
+				</div>
+			</form>
+			<br>
+
+
+
+			
+			<input type="number" value="0" min="0" max="10" step="1">
+			<p>Выберите значение от 0 до 50:</p>
+			<div>
+			  <input type="range" name="volume"
+			         min="0" max="50">
+			  <label for="volume">Объем</label>
+			</div>
+
+			<div>
+			  <input type="tel" name="phone" value="">
+			  <label for="phone">Телефон</label>
+			</div>
+
+			<div>
+			  <input type="email" name="email" value="">
+			  <label for="email">Ваш email</label>
+			</div>
+
+
+		</div>
+	</div>
+	<div class="quiz-main invisible-main">
+		<div class="quiz-header">
+			<h3 class="quiz__title">Квартиры напрямую от застройщиков в Москве и МО</h3>
+			<hr class="quiz__title-separator">
+		</div>
+		<div class="questions-all">
+			<!-- <div class="question-1" id="???" value=""> -->
+<!-- 				<div class="question-title">
+					<span class="is-block">Какую квартиру Вы ищете?</span>
+				</div>
+				<div class="question-answers"> -->
+					<!-- label => input или input + label -->
+
+					<!--  возможный вариант, нужно разбирать
+					<label class="b-checkbox checkbox">
+						<input type="checkbox" true-value="true" value="Студию"> 
+						<span class="check"></span> 
+						<span class="control-label">
+							<div class="answer">
+								<div class="answer__title">Студию&nbsp;												</div>
+							</div>
+						</span>
+					</label>
+					 -->
+
+<!-- 				</div>
+			</div> -->
+<!-- 			<div class="question-2" id="???" value="">
+				<div class="question-title">
+					<span class="is-block">Какую квартиру Вы ищете?</span>
+				</div>
+				<div class="question-answers"> -->
+<!-- 					label => input или input + label
+
+					 возможный вариант, нужно разбирать
+					<label class="b-checkbox checkbox">
+						<input type="checkbox" true-value="true" value="Студию"> 
+						<span class="check"></span> 
+						<span class="control-label">
+							<div class="answer">
+								<div class="answer__title">Студию&nbsp;												</div>
+							</div>
+						</span>
+					</label> -->
+					
+
+<!-- 				</div>		
+			</div> -->
+		</div>	
+	</div>
+	
+	<div class="quiz-footer invisible-footer">
+		<div class="progress-bar">
+			<!-- строка прогресса заполнения-->
+		</div>
+		<div class="quiz-bottons">
+			<!-- кнопки вперед / назад -->
+			<button class="c-button" type="button" id="button-previous">кнопка Previous</button>
+			<button disabled class="c-button" type="button" id="button-next">кнопка Next</button>
+		</div> 
+	</div>
+</div>
+
+
+
+	
+</body>
+</html>
