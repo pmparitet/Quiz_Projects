@@ -5,11 +5,12 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
   	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Document</title>
-	<link rel="stylesheet" href="/static/style.css">
+	<link rel="stylesheet" href="./static/style.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
 	<!-- <script src="jquery.min.js"></script> -->
-	<script src="/static/data.js"></script>
-	<script defer src="/static/main.js" ></script>
+	<script src="./static/data.js"></script>
+	<script defer src="./static/main.js" ></script>
+	<script src="./static/send.js"></script>
 </head>
 <body>
 	
@@ -58,6 +59,18 @@
 			
 			<!-- <input type="button" name="" id="" value="Тестовая кнопка input" /> -->
 			<!-- <a href="#" class="knopka">кнопка</a> -->
+			<br>
+			<br>
+			<form id="form">
+    			<input type="text" name="name" placeholder="Ваше имя" required>
+    			<input type="text" name="phone" placeholder="Ваш телефон" required>
+    			<button>Отправить</button>
+			</form>
+			<br>
+			<br>
+			
+			
+			
 			<input type="checkbox" name="technology" value="PHP" class="array-checked">
 			<input type="checkbox" name="technology" value="JS" class="array-checked">
 			<input type="checkbox" name="technology" value="CSS" class="array-checked">
