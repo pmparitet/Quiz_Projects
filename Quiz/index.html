@@ -10,7 +10,7 @@
 	<!-- <script src="jquery.min.js"></script> -->
 	<script src="./static/data.js"></script>
 	<script defer src="./static/main.js" ></script>
-	<script src="./static/send.js"></script>
+	<script defer src="./static/send.js"></script>
 </head>
 <body>
 	
@@ -61,60 +61,100 @@
 			<!-- <a href="#" class="knopka">кнопка</a> -->
 			<br>
 			<br>
+			<form id="my_form">
+				<div class="mar10-tb"><label>Имя: <input name="f[name]"></label></div>
+		    	<div class="mar10-tb"><label>Телефон: <input name="f[phone]"></label></div>
+		    	<div><button type="submit">Отправить</button></div>
+			</form> 
+		 
+			<div id="my_message"></div>
+			<br>
+			<br>
+			<script>
+			// $('#my_form').submit(function(){
+    
+   //  				alert('Нажата submit-кнопка');
+    
+   //  				return false;
+			// });
+			// 
+			$('#my_form').submit(function(){
+			    $.post(
+			        'post.php', // адрес обработчика
+			         $("#my_form").serialize(), // отправляемые данные          
+			        
+			        function(msg) { // получен ответ сервера  
+			            $('#my_form').hide('slow');
+			            $('#my_message').html(msg);
+			        }
+			    );
+			    return false;
+			});
+			</script>
+
+
+			<div class="mar10-tb"><label>Имя: <input name="f[name]" id="i1"></label></div>
+			<div class="mar10-tb"><label>Телефон: <input name="f[phone]" id="i2"></label></div>
+			<div><a href="#" id="my_send3">Отправить</a></div>
+			  
+			<div id="my_message3"></div>
+			 
+			<script> 
+			$('#my_send3').click(function(){
+			    $.post(
+			        'post.php', // адрес обработчика
+			        
+			        {
+			            name: $('#i1').val(), 
+			            phone: $('#i2').val()
+			        },
+			        
+			        function(msg) { // получен ответ сервера  
+			            $('#my_message3').html(msg);
+			        }
+			    );
+			    
+			    return false;
+			});
+			</script>
+
+
 			<form id="form">
-    			<input type="text" name="name" placeholder="Ваше имя" required>
-    			<input type="text" name="phone" placeholder="Ваш телефон" required>
+    			<input type="text" name="user_name" placeholder="Ваше имя" value="" required>
+    			<input type="text" name="user_phone" placeholder="Ваш телефон" value="" required>
     			<button>Отправить</button>
 			</form>
 			<br>
 			<br>
-			
-			
-			
-			<input type="checkbox" name="technology" value="PHP" class="array-checked">
-			<input type="checkbox" name="technology" value="JS" class="array-checked">
-			<input type="checkbox" name="technology" value="CSS" class="array-checked">
-			<br>
-			<br>
-			<br>
-			<input type="checkbox" class="checkboxClass"> 
-			<br>
-			<input type="checkbox" class="checkboxClass">
-			
-			<input type="checkbox" id="example"> 
-			//onchange=isCheckedAnswers(t)>
-			
-			
-			<div id="parent-id">
-			    <p>hello word1</p>
-			    <p class="test">hello word2</p>
-			    <p>hello word3</p>
-			    <p>hello word4</p>
-			</div>
 
-			<form action="telegram.php" autocomplete="on" method="POST">
+
+			<!-- <form action="telegram.php" autocomplete="on" method="POST"> -->
+			<form id="postForm" autocomplete="on">
 				<div>
-					<p>Имя</p>
-					<input placeholder="Имя" type="text" name="user_name" value="">				
-				</div>
-				<div>
-					<p>Телефон</p>
-					<input placeholder="Телефон" type="tel" name="user_phone" value="">
-				</div>
-				<div>
-					<p>Эл. почта</p>
-					<input placeholder="Email" type="email" name="user_email" value="">
+					<span>Имя</span>
+					<input placeholder="Имя" type="text" name="f[user_name]" value="">			
 				</div>
 				<br>
+				<div>
+					<span>Телефон</span>
+					<input placeholder="+79031234567" type="tel" name="f[user_phone]" value="" required>
+				</div>
+				<br>
+				<div>
+					<span>Email</span>
+					<input placeholder="example@mail.ru" type="email" name="f[user_email]" value="" required>
+				</div>
+				<br>
+				<div>
+					<button class="c-button" type="submit">Отправить</button>
+				</div>
+			</form>
+			<div id="resultMessage"></div>
+			<br>
+
 				<label>
 					<input type="checkbox" checked> Я согласен с <a href="#">условиями использования</a>
 				</label>
-				<div>
-					<button type="submit">Отправить</button>
-				</div>
-			</form>
-			<br>
-
 
 
 			

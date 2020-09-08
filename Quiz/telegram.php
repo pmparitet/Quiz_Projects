@@ -1,5 +1,25 @@
 <?php
 
+if (!$_POST) exit('No direct script access allowed');
+ 
+if (!isset($_POST['f'])) exit('No direct script access allowed');
+if (!isset($_POST['f']['user_phone'])) exit('No direct script access allowed');
+if (!isset($_POST['f']['user_email'])) exit('No direct script access allowed');
+ 
+$name = trim(strip_tags($_POST['f']['user_name']));
+$email = trim(strip_tags($_POST['f']['user_email']));
+$phone = trim(strip_tags($_POST['f']['user_phone']));
+ 
+if (!filter_var($email, FILTER_VALIDATE_EMAIL))
+{
+    exit('Неверный email! Обновите страницу (F5) и укажите правильный адрес');
+}
+ 
+if (!$phone)
+{
+    exit('Не указан телефон! Обновите страницу (F5) и укажите свой телефон');
+}
+
 /* https://api.telegram.org/botXXXXXXXXXXXXXXXXXXXXXXX/getUpdates,
 где, XXXXXXXXXXXXXXXXXXXXXXX - токен вашего бота, полученный ранее 
 
@@ -8,9 +28,9 @@ https://api.telegram.org/bot1098533239:AAFyVksLxfooS5A8PnHRhUZ8WzgE2RMX8b8/getUp
 */
 
 //Переменная $name,$phone, $mail получает данные при помощи метода POST из формы
-$name = $_POST['user_name'];
-$phone = $_POST['user_phone'];
-$email = $_POST['user_email'];
+$name = $_POST['f']['user_name'];
+$phone = $_POST['f']['user_phone'];
+$email = $_POST['f']['user_email'];
 
 //в переменную $token нужно вставить токен, который нам прислал @botFather
 $token = "1098533239:AAFyVksLxfooS5A8PnHRhUZ8WzgE2RMX8b8";
