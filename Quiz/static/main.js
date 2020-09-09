@@ -1,16 +1,6 @@
 var countQuestions = 0;
 //var input_qClassName = [];
 
-/* плагин для форматирования полей форм 
-https://github.com/igorescobar/jQuery-Mask-Plugin
-*/
-$(function() {
-  $(".phoneMask").mask("+7(000)000-00-00", {
-    placeholder: "+7(___)___-__-__",
-    clearIfNotMatch: true
-  });
-});
-
 function visibilityQuestionStart() {
 	console.log('нажатие на кнопку start');
 	// нахожу и убираю классы для главного блока "Start"
@@ -289,7 +279,15 @@ function readQuestion(){
 	}
 }
 	
-
+/* плагин для форматирования полей форм 
+https://github.com/igorescobar/jQuery-Mask-Plugin
+*/
+$(document).ready(function() {
+  $(".phoneMask").mask("+7(000)000-00-00", {
+    placeholder: "+7(___)___-__-__",
+    clearIfNotMatch: true
+  });
+});
 
 
 window.onload = readQuestion;

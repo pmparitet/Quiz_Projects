@@ -5,7 +5,8 @@ $('#postForm').submit(function(){
          $("#postForm").serialize(), // отправляемые данные          
         
         function(msg) { // получен ответ сервера  
-            $('#postForm').hide('slow');
+            // $('#postForm').hide('slow'); // скрытие формы после вывода
+            $('#postForm');
             $('#resultMessage').html(msg);
         }
     );
