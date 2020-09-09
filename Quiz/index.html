@@ -11,6 +11,7 @@
 	<script src="./static/data.js"></script>
 	<script defer src="./static/main.js" ></script>
 	<script defer src="./static/send.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/jquery-mask-plugin@1.14.16/dist/jquery.mask.min.js"></script>
 </head>
 <body>
 	
@@ -137,7 +138,7 @@
 				<br>
 				<div>
 					<span>Телефон</span>
-					<input placeholder="+79031234567" type="tel" name="f[user_phone]" value="" required>
+					<input class="phoneMask" type="tel" name="f[user_phone]" value="" required>
 				</div>
 				<br>
 				<div>
