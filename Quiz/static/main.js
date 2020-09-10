@@ -146,7 +146,7 @@ function createCodQuestion(questionNumber, box, questionsText, answers) {
 	number_q.append(title_q);
 	
 	var title_span = document.createElement('span');
-	title_span.className = 'is-block';
+	title_span.className = 'questionsText';
 	title_span.innerHTML = questionsText;
 	title_q.append(title_span);
 
@@ -179,6 +179,7 @@ function createCodQuestion(questionNumber, box, questionsText, answers) {
 		label_q.append(input_q);
 
 		var span_q = document.createElement('span');
+		span_q.className = 'nameAnswer';
 		span_q.innerHTML = nameAnswer;
 		label_q.append(span_q);
 	};

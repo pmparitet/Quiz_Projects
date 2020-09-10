@@ -3,14 +3,26 @@
   padding: 0;
 }
 
+/*.quiz {
+  width: 1000px;
+  margin: 0 auto;
+}*/
+
+/*
+font-family: 'Merriweather', serif;
+font-family: 'Montserrat', sans-serif;
+font-family: 'Playfair Display', serif;
+font-family: 'Roboto', sans-serif;
+font-family: 'Roboto Slab', serif;
+ Consolas;
+ */
+
 body {
-  margin: 0;
-  padding: 0;
   display: flex;
   justify-content: center;
   align-items: center;
   /*height: 150vh;*/
-  font-family: Consolas;
+  font-family: 'Merriweather';
 }
 
 .active-question,
@@ -25,33 +37,46 @@ body {
   display: none;
 }
 
-.questions-all {
-/*  display: flex;
-  flex-flow: row;*/
-}
+/*.questions-all {
+  display: flex;
+  flex-flow: row;
+}*/
 
 /* см задачу в Трелло ! */
-span.is-block {
+span.questionsText {
 margin-left: 150px;
 }
 
 /* для элемента input c type="checkbox" */
-.custom-checkbox>input {
+.checkAnswer {
   position: absolute;
   z-index: -1;
   opacity: 0;
 }
 
 /* для элемента label, связанного с .custom-checkbox */
-.custom-checkbox>span {
+.custom-checkbox>.nameAnswer,
+.custom-radio>.nameAnswer {
   display: inline-flex;
   align-items: center;
   user-select: none;
   padding: 12px;
 }
 
+/*label в вопросах*/
+.custom-checkbox,
+.custom-radio {
+  font-size: 30px;
+  text-align: center;
+  padding: 12px;
+  display: block;
+}
+
+
+
 /* создание в label псевдоэлемента before со следующими стилями */
-.custom-checkbox>span::before {
+/*.custom-checkbox>span*/
+.nameAnswer::before {
   content: '';
   display: inline-block;
   width: 1em;
@@ -66,41 +91,52 @@ margin-left: 150px;
   background-size: 50% 50%;
 }
 
+.custom-radio>.nameAnswer::before {
+  border-radius: 50%;
+}
+
 /* стили при наведении курсора на checkbox */
-.custom-checkbox>input:not(:disabled):not(:checked)+span:hover::before {
+.checkAnswer:not(:disabled):not(:checked)+.nameAnswer:hover::before {
   border-color: #b3d7ff;
 }
 
 /* стили для активного чекбокса (при нажатии на него) */
-.custom-checkbox>input:not(:disabled):active+span::before {
+.checkAnswer:not(:disabled):active+.nameAnswer::before {
   background-color: #b3d7ff;
   border-color: #b3d7ff;
 }
 
 /* стили для чекбокса, находящегося в фокусе */
-.custom-checkbox>input:focus+span::before {
+.checkAnswer:focus+.nameAnswer::before {
   box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
 }
 
 /* стили для чекбокса, находящегося в фокусе и не находящегося в состоянии checked */
-.custom-checkbox>input:focus:not(:checked)+span::before {
+.checkAnswer:focus:not(:checked)+.nameAnswer::before {
   border-color: #80bdff;
 }
 
 /* стили для чекбокса, находящегося в состоянии checked */
-.custom-checkbox>input:checked+span::before {
+.checkAnswer:checked+.nameAnswer::before {
   border-color: #0b76ef;
   background-color: #0b76ef;
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3e%3c/svg%3e");
 }
 
+/* стили для радиокнопки, находящейся в состоянии checked */
+.custom-radio>.checkAnswer:checked+.nameAnswer::before {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23fff'/%3e%3c/svg%3e");
+}
+
+
 /* стили для чекбокса, находящегося в состоянии disabled */
-.custom-checkbox>input:disabled+span::before {
+.checkAnswer:disabled+.nameAnswer::before {
   background-color: #e9ecef;
 }
 
 /* стили при наведении курсора на весь checkbox + label */
-.custom-checkbox:not(:disabled):not(:checked):hover {
+.custom-checkbox:not(:disabled):not(:checked):hover,
+.custom-radio:not(:disabled):not(:checked):hover {
   border: 2px solid #b3d7ff;
   border-radius: 0.25em;
   /* падинг отвечает за рамку при выделении (нижняя сторона ниже верха, поэтому не семетрично!)*/
@@ -199,6 +235,14 @@ a.button8:active { background: white; }
 }
 
 
+/*input[type=email]:invalid,
+input[type=tel]:invalid {
+  /*border: 2px dashed red;
+  border-color: #900;
+  background-color: #FDD;
+  box-shadow: 0 0 5px 1px red;
+}*/
+
 
 
 
@@ -273,14 +317,7 @@ a.button8:active { background: white; }
 
 
 
-label {
-	font-size: 30px;
-  text-align: center;
-  padding: 12px;
-  display: block;
-/*  border: 2px solid #adb5bd;
-  border-radius: 0.25em; */
-}
+
 
 
 
