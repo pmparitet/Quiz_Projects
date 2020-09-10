@@ -61,88 +61,31 @@
 			<!-- <a href="#" class="knopka">кнопка</a> -->
 			<br>
 			<br>
-			<form id="my_form">
-				<div class="mar10-tb"><label>Имя: <input name="f[name]"></label></div>
-		    	<div class="mar10-tb"><label>Телефон: <input name="f[phone]"></label></div>
-		    	<div><button type="submit">Отправить</button></div>
-			</form> 
-		 
-			<div id="my_message"></div>
-			<br>
-			<br>
-			<script>
-			// $('#my_form').submit(function(){
-    
-   //  				alert('Нажата submit-кнопка');
-    
-   //  				return false;
-			// });
-			// 
-			$('#my_form').submit(function(){
-			    $.post(
-			        'post.php', // адрес обработчика
-			         $("#my_form").serialize(), // отправляемые данные          
-			        
-			        function(msg) { // получен ответ сервера  
-			            $('#my_form').hide('slow');
-			            $('#my_message').html(msg);
-			        }
-			    );
-			    return false;
-			});
-			</script>
-
-
-			<div class="mar10-tb"><label>Имя: <input name="f[name]" id="i1"></label></div>
-			<div class="mar10-tb"><label>Телефон: <input name="f[phone]" id="i2"></label></div>
-			<div><a href="#" id="my_send3">Отправить</a></div>
-			  
-			<div id="my_message3"></div>
-			 
-			<script> 
-			$('#my_send3').click(function(){
-			    $.post(
-			        'post.php', // адрес обработчика
-			        
-			        {
-			            name: $('#i1').val(), 
-			            phone: $('#i2').val()
-			        },
-			        
-			        function(msg) { // получен ответ сервера  
-			            $('#my_message3').html(msg);
-			        }
-			    );
-			    
-			    return false;
-			});
-			</script>
-
-
-			<form id="form">
-    			<input type="text" name="user_name" placeholder="Ваше имя" value="" required>
-    			<input type="text" name="user_phone" placeholder="Ваш телефон" value="" required>
-    			<button>Отправить</button>
-			</form>
-			<br>
-			<br>
-
-
-			<!-- <form action="telegram.php" autocomplete="on" method="POST"> -->
 			<form id="postForm" autocomplete="on">
 				<div>
-					<span>Имя</span>
-					<input placeholder="Имя" type="text" name="f[user_name]" value="">			
+					<label>
+						<span>Имя</span>
+						<input placeholder="Имя" type="text" name="f[user_name]" value="">
+					</label>
 				</div>
 				<br>
 				<div>
-					<span>Телефон</span>
-					<input class="phoneMask" type="tel" name="f[user_phone]" value="" required> 
+					<label>
+						<span>Телефон</span>
+						<input class="phoneMask" type="tel" name="f[user_phone]" value="" required>
+					</label>
 				</div>
 				<br>
 				<div>
-					<span>Email</span>
-					<input placeholder="example@mail.ru" type="email" name="f[user_email]" value="" required>
+					<label>
+						<span>Email</span>
+						<input placeholder="example@mail.ru" type="email" name="f[user_email]" value="" required>
+					</label>
+				</div>
+				<div>
+					<label>
+					<input type="checkbox" checked> Я согласен с <a href="#">условиями использования</a>
+					</label>
 				</div>
 				<br>
 				<div>
@@ -152,29 +95,7 @@
 			<div id="resultMessage"></div>
 			<br>
 
-				<label>
-					<input type="checkbox" checked> Я согласен с <a href="#">условиями использования</a>
-				</label>
-
-
-			
-			<input type="number" value="0" min="0" max="10" step="1">
-			<p>Выберите значение от 0 до 50:</p>
-			<div>
-			  <input type="range" name="volume"
-			         min="0" max="50">
-			  <label for="volume">Объем</label>
-			</div>
-
-			<div>
-			  <input type="tel" name="phone" value="">
-			  <label for="phone">Телефон</label>
-			</div>
-
-			<div>
-			  <input type="email" name="email" value="">
-			  <label for="email">Ваш email</label>
-			</div>
+				
 
 
 		</div>
