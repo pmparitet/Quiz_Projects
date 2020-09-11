@@ -14,42 +14,8 @@
 	<script defer src="./static/send.js"></script>
 </head>
 <body>
-	
-	
-<!-- каркас на чистом HTML
-	<input type="checkbox" class="custom-checkbox" id="happy1" name="happy" value="yes">
-	<label for="happy1">Happy</label>
-	<br><br>
-	<input type="checkbox" class="custom-checkbox" id="happy2" name="happy" value="yes">
-	<label for="happy2">Happy</label>
-	<br><br>
-	<input type="checkbox" class="custom-checkbox" id="happy3" name="happy" value="yes">
-	<label for="happy3">Happy</label>
-	<br><br>
-	<input type="checkbox" class="custom-checkbox" id="happy4" name="happy" value="yes">
-	<label for="happy4">Happy</label>
- -->
 
-<!-- 	<div class="quiz-container">
-		<div class="quiz">
-			<div class="quiz__questions">
-				<div class="quiz__questions-header">
-					<h3 class="quiz__title">Квартиры напрямую от застройщиков в Москве и МО</h3>
-					<hr class="quiz__title-separator">
-					<div class="title quiz__question-title">
-						<span class="is-block">Какую квартиру Вы ищете?</span>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div> -->
-
-<!-- <div class="quiz">
-	<div id="quiz_questions">
-	</div>
-</div> -->
-
-<div class="quiz">
+<div class="quiz-container">
 	<div class="quiz-start active-question">
 		<!-- Стартовая страница -->
 		<div class="quiz-start-header">
@@ -74,7 +40,6 @@
 				</div>
 				<br>
 				<div>
-					
 					<label>
 						<span>Телефон</span>
 						<input class="phoneMask" type="tel" name="f[user_phone]" value="" required>
@@ -109,65 +74,20 @@
 			<br>
 		</div>
 		<div class="questions-all">
-			<!-- <div class="question-1" id="???" value=""> -->
-<!-- 				<div class="question-title">
-					<span class="is-block">Какую квартиру Вы ищете?</span>
-				</div>
-				<div class="question-answers"> -->
-					<!-- label => input или input + label -->
-
-					<!--  возможный вариант, нужно разбирать
-					<label class="b-checkbox checkbox">
-						<input type="checkbox" true-value="true" value="Студию"> 
-						<span class="check"></span> 
-						<span class="control-label">
-							<div class="answer">
-								<div class="answer__title">Студию&nbsp;												</div>
-							</div>
-						</span>
-					</label>
-					 -->
-
-<!-- 				</div>
-			</div> -->
-<!-- 			<div class="question-2" id="???" value="">
-				<div class="question-title">
-					<span class="is-block">Какую квартиру Вы ищете?</span>
-				</div>
-				<div class="question-answers"> -->
-<!-- 					label => input или input + label
-
-					 возможный вариант, нужно разбирать
-					<label class="b-checkbox checkbox">
-						<input type="checkbox" true-value="true" value="Студию"> 
-						<span class="check"></span> 
-						<span class="control-label">
-							<div class="answer">
-								<div class="answer__title">Студию&nbsp;												</div>
-							</div>
-						</span>
-					</label> -->
-					
-
-<!-- 				</div>		
-			</div> -->
+			<!--  -->
 		</div>	
 	</div>
 </div>	
-	<div class="quiz-footer invisible-footer">
-		<div class="progress-bar">
-			<!-- строка прогресса заполнения-->
-		</div>
-		<div class="quiz-bottons">
-			<!-- кнопки вперед / назад -->
-			<button class="c-button" type="button" id="button-previous">кнопка Previous</button>
-			<button disabled class="c-button" type="button" id="button-next">кнопка Next</button>
-		</div> 
+<div class="quiz-footer invisible-footer">
+	<div class="progress-bar">
+		<!-- строка прогресса заполнения-->
 	</div>
-
-
-
-
+	<div class="quiz-bottons">
+		<!-- кнопки вперед / назад -->
+		<button class="c-button" type="button" id="button-previous">кнопка Previous</button>
+		<button disabled class="c-button" type="button" id="button-next">кнопка Next</button>
+	</div> 
+</div>
 	
 </body>
 </html>

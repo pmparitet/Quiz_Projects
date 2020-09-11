@@ -3,9 +3,7 @@
   padding: 0;
 }
 
-.quiz {
-  flex: auto;
-}
+
 
 /*
 font-family: 'Merriweather', serif;
@@ -15,6 +13,7 @@ font-family: 'Roboto', sans-serif;
 font-family: 'Roboto Slab', serif;
  Consolas;
  */
+/*background-image: url("https://hgwipn3sa-res.cloudinary.com/image/upload/w_auto,dpr_2,f_auto,q_auto,g_auto,c_fill/p3lut26jhxjygozqm2nm.jpg");*/
 
 body {
   max-width: 1000px;
@@ -28,9 +27,20 @@ body {
   flex-direction: column;
 }
 
-.quiz-footer {
-  flex-shrink: 0;
+.quiz-container {
+  flex: 0;
 }
+
+.quiz-footer {
+    position: fixed;
+    bottom: 0;
+    height: auto;
+    z-index: 100;
+    margin-bottom: 20px;
+}
+/*.quiz-footer {
+  flex-shrink: 0;
+}*/
 
 .active-question,
 .active-main,
