@@ -3,10 +3,9 @@
   padding: 0;
 }
 
-/*.quiz {
-  width: 1000px;
-  margin: 0 auto;
-}*/
+.quiz {
+  flex: auto;
+}
 
 /*
 font-family: 'Merriweather', serif;
@@ -18,11 +17,19 @@ font-family: 'Roboto Slab', serif;
  */
 
 body {
+  max-width: 1000px;
+  margin: 0 auto;
+  height: 90vh;
   display: flex;
   justify-content: center;
   align-items: center;
   /*height: 150vh;*/
-  font-family: 'Merriweather';
+  font-family: 'Montserrat';
+  flex-direction: column;
+}
+
+.quiz-footer {
+  flex-shrink: 0;
 }
 
 .active-question,
