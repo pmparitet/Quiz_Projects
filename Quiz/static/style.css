@@ -17,30 +17,67 @@ font-family: 'Roboto Slab', serif;
 
 body {
   max-width: 1000px;
-  margin: 0 auto;
-  height: 90vh;
+  margin: auto;
+  height: 100%;
   display: flex;
   justify-content: center;
+  align-content: center;
   align-items: center;
   /*height: 150vh;*/
   font-family: 'Montserrat';
   flex-direction: column;
+  border: 2px solid green;
+}
+
+.container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	border: 2px solid red ;
+	
 }
 
 .quiz-container {
   flex: 0;
+  padding-bottom: 70px;
+  border: 2px solid black;
 }
 
-.quiz-footer {
-    position: fixed;
-    bottom: 0;
+.quiz {
+    /*position: fixed;
+    bottom:0%;
     height: auto;
     z-index: 100;
-    margin-bottom: 20px;
+    margin-bottom: 20px;*/
 }
 /*.quiz-footer {
   flex-shrink: 0;
 }*/
+
+@media (min-width: 451px){
+	body {
+
+	}
+	.container {
+		width: 800px;
+		height: 800px;
+    	margin: 20%;
+	}
+}
+
+@media (max-width: 450px){
+	body {
+		align-content: stretch;
+	}
+	.quiz-footer {
+    	position: fixed;
+    	bottom:0%;
+    	height: auto;
+    	z-index: 100;
+    	margin-bottom: 20px;
+	}
+}
 
 .active-question,
 .active-main,
