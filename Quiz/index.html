@@ -13,82 +13,82 @@
 	<script defer src="./static/main.js" ></script>
 	<script defer src="./static/send.js"></script>
 </head>
-<body>
+<body class="startImg">
 
 <div class="container">
-<div class="quiz-container">
-	<div class="quiz-start active-question">
-		<!-- Стартовая страница -->
-		<div class="quiz-start-header">
-			<h3 class="quiz-start-title">Квартиры напрямую от застройщиков в Москве и МО</h3>
-			<br>
-			<hr class="quiz-start-title-separator">
-			<br>
-			<button class="c-button" type="button" id="button-start">кнопка Start </button>
-<!-- 			<button class="c-button" type="button" id="button-start" onclick="alert(this.tagName.toLowerCase());">кнопка Start </button> -->
-			<!-- <button type="button" class="">просто кнопка</button> -->
-			
-			<!-- <input type="button" name="" id="" value="Тестовая кнопка input" /> -->
-			<!-- <a href="#" class="knopka">кнопка</a> -->
-			<br>
-			<br>
-			<form id="postForm" autocomplete="on">
-				<div>
-					<label>
-						<span>Имя</span>
-						<input placeholder="Имя" type="text" name="f[user_name]" value="">
-					</label>
-				</div>
+	<div class="quiz-container">
+		<div class="quiz-start active-question">
+			<!-- Стартовая страница -->
+			<div class="quiz-start-header">
+				<h3 class="quiz-start-title">Квартиры напрямую от застройщиков в Москве и МО</h3>
 				<br>
-				<div>
-					<label>
-						<span>Телефон</span>
-						<input class="phoneMask" type="tel" name="f[user_phone]" value="" required>
-					</label>
-				</div>
+				<hr class="quiz-start-title-separator">
 				<br>
-				<div>
-					<label>
-						<span>Email</span>
-						<input placeholder="example@mail.ru" type="email" name="f[user_email]" value="" required>
-					</label>
-				</div>
-				<div>
-					<label>
-					<input type="checkbox" checked> Я согласен с <a href="#">условиями использования</a>
-					</label>
-				</div>
+				<button class="c-button" type="button" id="button-start">кнопка Start </button>
+	<!-- 			<button class="c-button" type="button" id="button-start" onclick="alert(this.tagName.toLowerCase());">кнопка Start </button> -->
+				<!-- <button type="button" class="">просто кнопка</button> -->
+				
+				<!-- <input type="button" name="" id="" value="Тестовая кнопка input" /> -->
+				<!-- <a href="#" class="knopka">кнопка</a> -->
 				<br>
-				<div>
-					<button class="c-button" type="submit">Отправить</button>
-				</div>
-			</form>
-			<div id="resultMessage"></div>
-			<br>
+				<br>
+				<form id="postForm" autocomplete="on">
+					<div>
+						<label>
+							<span>Имя</span>
+							<input placeholder="Имя" type="text" name="f[user_name]" value="">
+						</label>
+					</div>
+					<br>
+					<div>
+						<label>
+							<span>Телефон</span>
+							<input class="phoneMask" type="tel" name="f[user_phone]" value="" required>
+						</label>
+					</div>
+					<br>
+					<div>
+						<label>
+							<span>Email</span>
+							<input placeholder="example@mail.ru" type="email" name="f[user_email]" value="" required>
+						</label>
+					</div>
+					<div>
+						<label>
+						<input type="checkbox" checked> Я согласен с <a href="#">условиями использования</a>
+						</label>
+					</div>
+					<br>
+					<div>
+						<button class="c-button" type="submit">Отправить</button>
+					</div>
+				</form>
+				<div id="resultMessage"></div>
+				<br>
+			</div>
 		</div>
-	</div>
-	<div class="quiz-main invisible-main">
-		<div class="quiz-header">
-			<h3 class="quiz-title">Квартиры напрямую от застройщиков в Москве и МО</h3>
-			<br>
-			<hr class="quiz-title-separator">
-			<br>
+		<div class="quiz-main invisible-main">
+			<div class="quiz-header">
+				<h3 class="quiz-title">Квартиры напрямую от застройщиков в Москве и МО</h3>
+				<br>
+				<hr class="quiz-title-separator">
+				<br>
+			</div>
+			<div class="questions-all">
+				<!--  -->
+			</div>	
 		</div>
-		<div class="questions-all">
-			<!--  -->
-		</div>	
+	</div>	
+	<div class="quiz-footer invisible-footer">
+		<div class="progress-bar">
+			<!-- строка прогресса заполнения-->
+		</div>
+		<div class="quiz-bottons">
+			<!-- кнопки вперед / назад -->
+			<button class="c-button" type="button" id="button-previous">кнопка Previous</button>
+			<button disabled class="c-button" type="button" id="button-next">кнопка Next</button>
+		</div> 
 	</div>
-</div>	
-<div class="quiz-footer invisible-footer">
-	<div class="progress-bar">
-		<!-- строка прогресса заполнения-->
-	</div>
-	<div class="quiz-bottons">
-		<!-- кнопки вперед / назад -->
-		<button class="c-button" type="button" id="button-previous">кнопка Previous</button>
-		<button disabled class="c-button" type="button" id="button-next">кнопка Next</button>
-	</div> 
-</div>
 </div> 
 	
 </body>

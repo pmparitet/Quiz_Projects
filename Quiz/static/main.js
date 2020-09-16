@@ -13,6 +13,7 @@ function visibilityQuestionStart() {
 	buttonStartToQ1.classList.replace('invisible-question', 'active-question');
 	buttonStart_b = document.querySelector('.quiz-footer');
 	buttonStart_b.classList.replace('invisible-footer', 'active-footer');
+	document.querySelector('.startImg').classList.remove('startImg');
 	document.getElementById('button-previous').disabled = true;
 }; 
 

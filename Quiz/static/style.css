@@ -23,8 +23,10 @@ body {
   align-items: center;
   font-family: 'Montserrat';
   flex-direction: column;
-  border: 2px solid green;
-  
+  background-color: #f8f8f8;
+  /*border: 2px solid green;*/
+  /*position: absolute;*/
+
 }
 
 .container {
@@ -32,17 +34,20 @@ body {
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
-	border: 2px solid red ;
-	
+  background-color: #fff;
 }
 
 .quiz-container {
   flex: 0 1 auto;
   padding-bottom: 70px;
-  border: 2px solid black;
+  /*border: 2px solid black;*/
+
 }
 
-
+.quiz-start {
+  background-color: orange;
+  background: none;
+}
 
 .quiz {
     /*position: fixed;
@@ -56,29 +61,57 @@ body {
 }*/
 
 @media (min-width: 451px){
-	body {
-
+	.startImg {
+    background-image: url('./image/krdmckjhyhk0gdhprpw1.jpg');
+    background-size: 100% 100vh;
+    background-repeat: no-repeat;
 	}
+  .startImg>.container {
+    background: none;
+    border: none;
+    box-shadow: none;
+  }
+  .quiz-footer {
+    z-index: 100;
+    margin-bottom: 20px;
+  }
 	.container {
     margin: 10%;
+    box-sizing: border-box;
+    border: 5px solid transparent;
+    border-radius: 4px;
+    border-color: #e6e6e6;
+    box-shadow: 0 7px 15px 0 rgba(0,0,0,.15);
 	}
   .quiz-container {
     width: 760px;
     height: 450px;
     /*overflow: scroll;*/
     overflow-x: hidden;
+
   }
   .custom-checkbox,
   .custom-radio {
     display: inline-flex;
-    width: 45%;
+    width: 40%;
+    padding: 12px 12px 12px 25px;
+    margin-left: 20px;
+  }
+  .custom-checkbox:not(:disabled):not(:checked):hover,
+  .custom-radio:not(:disabled):not(:checked):hover {
+    /* падинг отвечает за рамку при выделении (нижняя сторона ниже верха, поэтому не семетрично!)*/
+    padding: 10px 10px 10px 23px;
   }
 }
 
 @media (max-width: 450px){
 	body {
 		align-content: stretch;
+    background-color: #fff;
 	}
+  .container {
+    
+  }
 	.quiz-footer {
     	position: fixed;
     	bottom:0%;
@@ -90,6 +123,13 @@ body {
   .custom-radio {
     display: flex;
     justify-content: flex-start;
+    text-align: justify;
+    padding: 12px;
+  }
+  .custom-checkbox:not(:disabled):not(:checked):hover,
+  .custom-radio:not(:disabled):not(:checked):hover {
+    /* падинг отвечает за рамку при выделении (нижняя сторона ниже верха, поэтому не семетрично!)*/
+    padding: 10px;
   }
 }
 
@@ -135,8 +175,8 @@ margin-left: 150px;
 .custom-checkbox,
 .custom-radio {
   font-size: 20px;
-  text-align: center;
-  padding: 12px;
+  /*text-align: justify;*/
+  
 }
 
 
@@ -152,7 +192,7 @@ margin-left: 150px;
   flex-grow: 0;
   border: 1px solid #adb5bd;
   border-radius: 0.25em;
-  margin-right: 0.5em;
+  margin-right: 30px;
   background-repeat: no-repeat;
   background-position: center center;
   background-size: 50% 50%;
@@ -205,9 +245,7 @@ margin-left: 150px;
 .custom-checkbox:not(:disabled):not(:checked):hover,
 .custom-radio:not(:disabled):not(:checked):hover {
   border: 2px solid #b3d7ff;
-  border-radius: 0.25em;
-  /* падинг отвечает за рамку при выделении (нижняя сторона ниже верха, поэтому не семетрично!)*/
-  padding: 10px 9px 10px 9px; 
+  border-radius: 0.25em; 
 }
 
 a.button8 {
