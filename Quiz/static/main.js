@@ -29,8 +29,10 @@ function visibilityQuestion() {
 	if (this.id == 'button-next') {
 		new_test_el_next = mas_test_el_next[0] + '-' + (++mas_test_el_next[1]);
 		if (mas_test_el_next[1] > countQuestions) {
+			document.querySelector('.finishForm').classList.replace('invisible-finish', 'active-finish');
+			buttonStart_b.classList.replace('active-footer', 'invisible-footer');
 			console.log('больше вопросов нет => стоп');
-			return;
+			//return;
 		} 
 		// console.log(new_test_el_next);
 		if (new_test_el_next == 'question-2') {

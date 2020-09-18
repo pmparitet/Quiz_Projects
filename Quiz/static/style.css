@@ -135,12 +135,14 @@ body {
 
 .active-question,
 .active-main,
+.active-finish,
 .active-footer {
   display: block;
 }
 
 .invisible-question,
 .invisible-main,
+.invisible-finish,
 .invisible-footer {
   display: none;
 }

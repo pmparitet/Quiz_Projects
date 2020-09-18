@@ -25,46 +25,14 @@
 				<hr class="quiz-start-title-separator">
 				<br>
 				<button class="c-button" type="button" id="button-start">кнопка Start </button>
-	<!-- 			<button class="c-button" type="button" id="button-start" onclick="alert(this.tagName.toLowerCase());">кнопка Start </button> -->
+				
+					<!-- 			<button class="c-button" type="button" id="button-start" onclick="alert(this.tagName.toLowerCase());">кнопка Start </button> -->
+
 				<!-- <button type="button" class="">просто кнопка</button> -->
+
 				
 				<!-- <input type="button" name="" id="" value="Тестовая кнопка input" /> -->
 				<!-- <a href="#" class="knopka">кнопка</a> -->
-				<br>
-				<br>
-				<form id="postForm" autocomplete="on">
-					<div>
-						<label>
-							<span>Имя</span>
-							<input placeholder="Имя" type="text" name="f[user_name]" value="">
-						</label>
-					</div>
-					<br>
-					<div>
-						<label>
-							<span>Телефон</span>
-							<input class="phoneMask" type="tel" name="f[user_phone]" value="" required>
-						</label>
-					</div>
-					<br>
-					<div>
-						<label>
-							<span>Email</span>
-							<input placeholder="example@mail.ru" type="email" name="f[user_email]" value="" required>
-						</label>
-					</div>
-					<div>
-						<label>
-						<input type="checkbox" checked> Я согласен с <a href="#">условиями использования</a>
-						</label>
-					</div>
-					<br>
-					<div>
-						<button class="c-button" type="submit">Отправить</button>
-					</div>
-				</form>
-				<div id="resultMessage"></div>
-				<br>
 			</div>
 		</div>
 		<div class="quiz-main invisible-main">
@@ -77,6 +45,43 @@
 			<div class="questions-all">
 				<!--  -->
 			</div>	
+		</div>
+		<div class="finishForm invisible-finish">
+			<br>
+			<br>
+			<form id="postForm" autocomplete="on">
+				<div>
+					<label>
+						<span>Имя</span>
+						<input placeholder="Имя" type="text" name="f[user_name]" value="">
+					</label>
+				</div>
+				<br>
+				<div>
+					<label>
+						<span>Телефон</span>
+						<input class="phoneMask" type="tel" name="f[user_phone]" value="" required>
+					</label>
+				</div>
+				<br>
+				<div>
+					<label>
+						<span>Email</span>
+						<input placeholder="example@mail.ru" type="email" name="f[user_email]" value="" required>
+					</label>
+				</div>
+				<div>
+					<label>
+					<input type="checkbox" checked> Я согласен с <a href="#">условиями использования</a>
+					</label>
+				</div>
+				<br>
+				<div>
+					<button class="c-button" type="submit">Отправить</button>
+				</div>
+			</form>
+			<div id="resultMessage"></div>
+			<br>
 		</div>
 	</div>	
 	<div class="quiz-footer invisible-footer">
