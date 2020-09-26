@@ -1,6 +1,8 @@
 var countQuestions = 0;
 //var input_qClassName = [];
 
+let dataValue;
+
 function visibilityQuestionStart() {
 	console.log('нажатие на кнопку start');
 	// нахожу и убираю классы для главного блока "Start"
@@ -31,8 +33,9 @@ function visibilityQuestion() {
 		if (mas_test_el_next[1] > countQuestions) {
 			document.querySelector('.finishForm').classList.replace('invisible-finish', 'active-finish');
 			buttonStart_b.classList.replace('active-footer', 'invisible-footer');
+			test_el_next.classList.replace('active-question', 'invisible-question');
 			console.log('больше вопросов нет => стоп');
-			//return;
+			return;
 		} 
 		// console.log(new_test_el_next);
 		if (new_test_el_next == 'question-2') {
@@ -247,12 +250,11 @@ $(document).on('change', '.checkAnswer', function () {
 
     console.log(arrayCheckedQ);
     // получение обьекта через сириалайз
-    const data = $('.checkAnswer:checked').serializeArray();
-    $.each(data,function(){
-	console.log(this.name+'='+this.value);})
-	console.log(data[0]);
+ //    dataValue = $('.checkAnswer:checked').serializeArray();
+ //    $.each(dataValue,function(){
+	// console.log(this.name+'='+this.value);})
+	// console.log(dataValue[0]);
 });
-
 
 
 
