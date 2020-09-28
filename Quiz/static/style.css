@@ -25,7 +25,23 @@ body {
   background-color: #f8f8f8;
   /*border: 2px solid green;*/
   /*position: absolute;*/
+  color: #4a4a4a;
+  font-size: 1em;
+  font-weight: 400;
+  line-height: 1.5;
 
+}
+
+h1 {
+    font-size: 2em;
+}
+
+h2 {
+    font-size: 1.5em;
+}
+
+h3 {
+    font-size: 1.17em;
 }
 
 .container {
@@ -43,13 +59,91 @@ body {
 
 }
 
+.quiz-start-title {
+  font-weight: 700;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.2;
+  letter-spacing: normal;
+  margin-bottom: 1rem;
+}
+
+.quiz-start-title-subheader {
+  font-weight: 700;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.33;
+  letter-spacing: normal;
+  margin-bottom: 1rem;
+}
+
+.quiz-title-separator {
+  background: #f3f3f3;
+  margin: auto -30px;
+  height: 1px;
+  border: none;
+  display: block;
+  padding: 0;
+}
+
+.quiz-title {
+  font-size: 16px;
+  text-align: left;
+  display: flex;
+  align-items: flex-start;
+  line-height: 1.2;
+  color: #69748c;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.questionsText {
+  font-size: 22px;
+  color: #363636;
+  text-align: left;
+  margin: 12px 0 16px 10px!important;
+  line-height: 1.2;
+  font-weight: 500;
+}
 
 @media (min-width: 451px){
   body {
     height: 100vh;
   }
+  .container {
+    margin: 10%;
+    box-sizing: border-box;
+    border: 5px solid transparent;
+    border-radius: 4px;
+    border-color: #e6e6e6;
+    box-shadow: 0 7px 15px 0 rgba(0,0,0,.15);
+  }
+  .quiz-container {
+    width: 760px;
+    height: 450px;
+    /*overflow: scroll;*/
+    overflow-x: hidden;
+
+  }
+  .quiz-start-title {
+    font-size: 30px;
+    color: #fff;
+  }
+  .quiz-start-title-subheader {
+    font-size: 18px;
+    color: #fff;
+  }
+  .quiz-start-title-separator {
+    width: 38px;
+    height: 3px;
+    margin-bottom: 1rem;
+    background-color: #fff;
+  }
+  .quiz-title {
+    padding-left: 60px;
+  }
   .startImg {
-    background: url('./image/krdmckjhyhk0gdhprpw1.jpg') no-repeat 0 40%; 
+    background: url('./image/krdmckjhyhk0gdhprpw1530.jpg') no-repeat 0 40%; 
     background-size: cover;
     z-index: 20;
 	}
@@ -107,21 +201,7 @@ body {
     z-index: 100;
     margin-bottom: 20px;
   }
-	.container {
-    margin: 10%;
-    box-sizing: border-box;
-    border: 5px solid transparent;
-    border-radius: 4px;
-    border-color: #e6e6e6;
-    box-shadow: 0 7px 15px 0 rgba(0,0,0,.15);
-	}
-  .quiz-container {
-    width: 760px;
-    height: 450px;
-    /*overflow: scroll;*/
-    overflow-x: hidden;
 
-  }
   .custom-checkbox,
   .custom-radio {
     display: inline-flex;
@@ -139,28 +219,61 @@ body {
 @media (max-width: 450px){
 	body {
 		align-content: stretch;
-    	background-color: #fff;
-    	height: 100%;
+  	background-color: #fff;
+  	height: 100%;
 	}
-  .container {
+  .quiz-start-title {
+    font-size: 26px;
+    color: #020202;
+  }
+  .quiz-start-title-subheader {
+    font-size: 16px;
+    color: #777b95;
+  }
+  .questionsText {
     
   }
-   .startImg>.container {
+  .start-page__bg {
+    height: 40vh;
+    background: url('./image/p3lut26jhxjygozqm2nm.jpg') no-repeat 0 ;
+    background-size: cover;
+    background-position: 50%;
+    z-index: 20;
+    flex: 0 0 220px;
+  }  
+  .startImg>.container {
     background: none;
     border: none;
     box-shadow: none;
   }
-	.startImg {
-	    background: url('./image/krdmckjhyhk0gdhprpw1.jpg') no-repeat 0 40%;
-	    background-size: cover;
-	    z-index: 20;
-	}
+  .quiz-start {
+    position: absolute;
+    /*top: 30%;*/
+    /*bottom: 10vh;*/
+    top: 0;
+    bottom: 0;
+    z-index: 20;
+    overflow-x: visible;
+    left: 0;
+    right: 0;
+    /*border: 2px solid green;*/
+  }
+  .quiz-start-header {
+    /*height: 60vh;  */
+    padding: 0 1rem;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    flex: 1 1 auto;
+    border: 2px solid red;
+  }
 	.quiz-footer {
-    	position: fixed;
-    	bottom:0%;
-    	height: auto;
-    	z-index: 100;
-    	margin-bottom: 20px;
+  	position: fixed;
+  	bottom:0%;
+  	height: auto;
+  	z-index: 100;
+  	margin-bottom: 20px;
 	}
   .custom-checkbox,
   .custom-radio {

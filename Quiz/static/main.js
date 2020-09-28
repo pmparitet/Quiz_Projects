@@ -1,7 +1,4 @@
 var countQuestions = 0;
-//var input_qClassName = [];
-
-let dataValue;
 
 function visibilityQuestionStart() {
 	console.log('нажатие на кнопку start');
