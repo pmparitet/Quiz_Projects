@@ -23,7 +23,7 @@ body {
   font-family: 'Montserrat';
   flex-direction: column;
   background-color: #f8f8f8;
-  /*border: 2px solid green;*/
+  border: 2px solid green;
   /*position: absolute;*/
   color: #4a4a4a;
   font-size: 1em;
@@ -50,12 +50,13 @@ h3 {
 	align-items: center;
 	flex-direction: column;
 	background-color: #fff;
+	border: 2px solid yellow;
 }
 
 .quiz-container {
   flex: 0 1 auto;
   padding-bottom: 70px;
-  /*border: 2px solid black;*/
+  border: 2px solid blue;
 
 }
 
@@ -79,7 +80,7 @@ h3 {
 
 .quiz-title-separator {
   background: #f3f3f3;
-  margin: auto -30px;
+  margin: auto;
   height: 1px;
   border: none;
   display: block;
@@ -216,9 +217,9 @@ h3 {
   }
 }
 
-@media (max-width: 450px){
+@media (max-width: 450px), (max-width: 450px) and (orientation: landscape) {
 	body {
-		align-content: stretch;
+	align-content: stretch;
   	background-color: #fff;
   	height: 100%;
 	}
@@ -268,13 +269,15 @@ h3 {
     flex: 1 1 auto;
     border: 2px solid red;
   }
-	.quiz-footer {
+  .quiz-footer {
   	position: fixed;
+  	/*position: absolute;*/
   	bottom:0%;
   	height: auto;
   	z-index: 100;
   	margin-bottom: 20px;
-	}
+  	/*flex: 0 0 auto;*/
+  }
   .custom-checkbox,
   .custom-radio {
     display: flex;
@@ -308,10 +311,6 @@ h3 {
   flex-flow: row;
 }*/
 
-/* см задачу в Трелло ! */
-span.questionsText {
-margin-left: 150px;
-}
 
 /* для элемента input c type="checkbox" */
 .checkAnswer {
