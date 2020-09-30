@@ -1,5 +1,6 @@
 /*background-image: url("https://hgwipn3sa-res.cloudinary.com/image/upload/w_auto,dpr_2,f_auto,q_auto,g_auto,c_fill/p3lut26jhxjygozqm2nm.jpg");*/
 
+
 body {
   max-width: 1000px;
   margin: auto;
@@ -110,7 +111,12 @@ h3 {
 	display: flex;
 	flex-direction: column;
 	align-items: stretch;
+  margin-top: 20px;
+  font-weight: 500;
 	/*justify-content: center;*/
+}
+#postForm label {
+  margin-bottom: 10px;
 }
 #postForm input {
 	/*border: 2px solid red;*/
@@ -118,7 +124,29 @@ h3 {
 	/*flex-direction: column;*/
 	/*align-items: flex-start;*/
 	/*justify-content: flex-start;*/
+  /*width: 150px;*/
+  border-radius: 5px;
+  border: solid 2px #b6b6b6;
+  opacity: .7;
+  margin-bottom: 10px;
 }
+
+#postForm span {
+
+}
+#button-start,
+#button-postForm {
+    min-height: 55px;
+    border-radius: 40px;
+    font-size: 18px!important;
+  animation: heartbeat 1.5s ease-in-out infinite both;
+  /*animation: rotate-scale-up-ver 0.65s linear both;*/
+  /*animation: slide-in-elliptic-bottom-fwd 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) 500ms both;*/
+}
+#button-postForm {
+  margin-top: 30px;
+}
+
 
 @media (min-width: 768px){
   body {
@@ -239,6 +267,11 @@ h3 {
     /* падинг отвечает за рамку при выделении (нижняя сторона ниже верха, поэтому не семетрично!)*/
     padding: 8px 8px 8px 23px;
   }
+  #button-previous,
+  #button-next {
+    opacity: .7;
+    color: #fff;
+  }
 }
 
 @media (max-width: 767px) {
@@ -252,12 +285,16 @@ h3 {
     /*background-color: #f7f7f7;*/
   }
   .start-page__bg {
+    /*max-height: 40vh;*/
     height: 40vh;
     background: url('./image/p3lut26jhxjygozqm2nm.jpg') no-repeat 0 ;
     background-size: cover;
     background-position: 50%;
-    z-index: 20;
+    z-index: 1;
     flex: 0 0 220px;
+    
+    /*overflow-y: no-content;*/
+    /*display: flex;*/
   }  
   .startImg>.container {
     background: none;
@@ -278,28 +315,38 @@ h3 {
   }
   .quiz-start-header {
     /*height: 60vh;  */
-    padding: 0 1rem;
+    /*padding: 0 1rem;*/
+    padding: 1.5rem 2rem;
     align-items: center;
     display: flex;
     justify-content: center;
     flex-direction: column;
     flex: 1 1 auto;
+    z-index: 20;
+    /*animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;*/
     /*border: 2px solid red;*/
   }
   .quiz-start-title {
     font-size: 26px;
     color: #020202;
-    text-align: center;
+    text-align: left;
+
   }
   .quiz-start-title-subheader {
     font-size: 16px;
     color: #777b95;
   } 
+  #button-start,
+  #button-postForm {
+    color: #fff;
+    white-space: normal;
+    width: 100%;
+  }
   .quiz-main {
     padding: 0 1rem;
   }
   #postForm {
-  	padding: 0 1rem;
+  	padding: 1.5rem 1.5rem;
   }
   .quiz-footer {
   	position: fixed;
@@ -321,6 +368,14 @@ h3 {
   .custom-radio:not(:disabled):not(:checked):hover {
     /* падинг отвечает за рамку при выделении (нижняя сторона ниже верха, поэтому не семетрично!)*/
     padding: 8px;
+  }
+  #button-previous,
+  #button-next {
+    opacity: .7;
+    color: #fff;
+  }
+  #button-next {
+    /*min-width: 115px;*/
   }
 }
 
@@ -398,29 +453,29 @@ h3 {
 
 /* стили при наведении курсора на checkbox */
 .checkAnswer:not(:disabled):not(:checked)+.nameAnswer:hover::before {
-  border-color: #b3d7ff;
+  border-color: #1b9f2d80;
 }
 
 /* стили для активного чекбокса (при нажатии на него) */
 .checkAnswer:not(:disabled):active+.nameAnswer::before {
-  background-color: #b3d7ff;
-  border-color: #b3d7ff;
+  background-color: #1b9f2d80;
+  border-color: #1b9f2d80;
 }
 
 /* стили для чекбокса, находящегося в фокусе */
 .checkAnswer:focus+.nameAnswer::before {
-  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+  box-shadow: 0 0 0 0.2rem #b3f2bc;
 }
 
 /* стили для чекбокса, находящегося в фокусе и не находящегося в состоянии checked */
 .checkAnswer:focus:not(:checked)+.nameAnswer::before {
-  border-color: #80bdff;
+  border-color: #1b9f2d80;
 }
 
 /* стили для чекбокса, находящегося в состоянии checked */
 .checkAnswer:checked+.nameAnswer::before {
-  border-color: #0b76ef;
-  background-color: #0b76ef;
+  border-color: #1b9f2d;
+  background-color: #1b9f2d;
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3e%3c/svg%3e");
 }
 
@@ -438,7 +493,7 @@ h3 {
 /* стили при наведении курсора на весь checkbox + label */
 .custom-checkbox:not(:disabled):not(:checked):hover,
 .custom-radio:not(:disabled):not(:checked):hover {
-  border: 2px solid #b3d7ff;
+  border: 2px solid #1b9f2d80;
   border-radius: 0.25em; 
 }
 
@@ -495,16 +550,26 @@ a.button8:active { background: white; }
     background: #ccc;
     */
   /* синяя закругленная */
-  min-width: 100px;
+  /*min-width: 100px;*/
   font-family: inherit;
+  font-weight: 500;
   appearance: none;
   border: 0;
-  border-radius: 5px;
-  background: #4676d7;
+  /*border-radius: 5px;*/
+  border-radius: 40px;
+  /*background: #4676d7;*/
+  background: #1b9f2d;
   color: #fff;
-  padding: 8px 16px;
-  font-size: 1rem;
+  /*padding: 8px 16px;*/
+  /*font-size: 1rem;*/
   cursor: pointer;
+  font-size: 16px;
+  padding: 12px 30px;
+  white-space: normal;
+  height: 43px;
+  
+  /*animation: shake-bottom 0.8s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;*/
+  
 }
 
 /* отключенная кнопка*/
@@ -513,6 +578,7 @@ a.button8:active { background: white; }
   color: #d2d5db;
   background: #6c7589;
   cursor: not-allowed;
+  border-color: #dbdbdb;
 }
 
 /*.c-button_disabled,
@@ -525,8 +591,10 @@ a.button8:active { background: white; }
 
 /* при наведении курсора мышки */
 .c-button:hover {
-  background: #1d49aa;
+  background: #126d1f;
+  /*animation: shake-bottom 0.8s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;*/
 }
+
 /* при нажатии */
 .c-button:focus {
   outline: none;
