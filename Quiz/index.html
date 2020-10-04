@@ -12,9 +12,10 @@
   	    function gtag() { dataLayer.push(arguments); }
   	    gtag('js', new Date());
   	
-  	    gtag('config', 'UA-179396748-1');
+  	    gtag('config', 'UA-179396748-1', { 'allow_ad_personalization_signals': true });
   	</script>
 	<title>&#9996; Квартиры и апартаменты в Москве напрямую от застройщиков</title>
+	<!-- <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png"> -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" />
 	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&family=Playfair+Display:wght@400;500&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="./static/style.css">
@@ -40,7 +41,7 @@
 				<h1 class="quiz-start-title">Квартиры и апартаменты в Москве напрямую от застройщиков</h1>
 				<h2 class="quiz-start-title-subheader">✓200 жилых комплексов ✓Квартиры от 5 млн. ✓Ипотека от 5% ✓Без комиссий и переплат</h2>
 				
-				<button class="c-button" type="button" id="button-start"> <b>&#9732; &ensp;</b> Подобрать квартиру </button>
+				<button class="c-button" type="button" id="button-start" onclick="window.location.href = '#Start';"> &#10003;  Подобрать квартиру </button>
 				
 					<!-- 			<button class="c-button" type="button" id="button-start" onclick="alert(this.tagName.toLowerCase());">кнопка Start </button> -->
 
@@ -65,8 +66,8 @@
 		<div class="finishForm invisible-finish">
 			<form id="postForm" autocomplete="on">
 				<div>
-					<p class="question-title">Заполните форму и получите 15 лучших предложений</p>
-					<p class="quiz-start-title-subheader">Мы подберем для Вас лучшие варианты и расскажем о результате в течение 2х часов</p>
+					<p class="finish-title">Заполните форму и получите 15 лучших предложений</p>
+					<p class="finish-title-subheader">Мы подберем для Вас лучшие варианты и расскажем о результате в течение 2х часов</p>
 				</div>
 				<br>
 				<div>
@@ -106,8 +107,8 @@
 		</div>
 		<div class="quiz-bottons">
 			<!-- кнопки вперед / назад -->
-			<button class="c-button" type="button" id="button-previous"> <- </button>
-			<button disabled class="c-button" type="button" id="button-next">Далее -> </button>
+			<button class="c-button" type="button" id="button-previous" onclick="window.location.href = '#';"> <- </button>
+			<button disabled class="c-button" type="button" id="button-next" >Далее -> </button>
 		</div> 
 	</div>
 </div> 

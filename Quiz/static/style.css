@@ -59,6 +59,7 @@ h3 {
   /*font-family: 'Playfair Display', serif;*/
 }
 
+.finish-title-subheader,
 .quiz-start-title-subheader {
   font-weight: 500;
   font-style: normal;
@@ -90,6 +91,7 @@ h3 {
   margin-bottom: 16px;
 }
 
+.finish-title,
 .question-title {
   font-size: 22px;
   color: #363636;
@@ -111,7 +113,7 @@ h3 {
 	display: flex;
 	flex-direction: column;
 	align-items: stretch;
-  margin-top: 20px;
+  margin-top: 10px;
   font-weight: 500;
 	/*justify-content: center;*/
 }
@@ -233,11 +235,7 @@ h3 {
   .quiz-start-title-subheader {
     font-size: 18px;
     color: #fff;
-
   }
-/*    .quiz-main {
-    padding: 0 1rem;
-  }*/
   .quiz-title {
     padding-left: 60px;
   }
@@ -249,12 +247,15 @@ h3 {
     margin-bottom: 20px;
   }
   #postForm {
-  	padding-left: 60px;
+  	padding: 0px 60px;
   }
   #postForm input {
   	/*margin-left: 60px;*/
   }
-
+  .finish-title-subheader {
+    font-size: 16px;
+    color: #777b95;
+  }
   .custom-checkbox,
   .custom-radio {
     display: inline-flex;
@@ -332,6 +333,7 @@ h3 {
     text-align: left;
 
   }
+  .finish-title-subheader,
   .quiz-start-title-subheader {
     font-size: 16px;
     color: #777b95;
@@ -346,7 +348,7 @@ h3 {
     padding: 0 1rem;
   }
   #postForm {
-  	padding: 1.5rem 1.5rem;
+  	padding: 0rem 1.5rem 1.5rem 1.5rem;
   }
   .quiz-footer {
   	position: fixed;
@@ -567,7 +569,7 @@ a.button8:active { background: white; }
   padding: 12px 30px;
   white-space: normal;
   height: 43px;
-  
+  box-shadow: 0 7px 15px 5px rgba(0,0,0,.15);
   /*animation: shake-bottom 0.8s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;*/
   
 }

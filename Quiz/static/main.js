@@ -14,6 +14,7 @@ function visibilityQuestionStart() {
 	buttonStart_b.classList.replace('invisible-footer', 'active-footer');
 	document.querySelector('.startImg').classList.remove('startImg');
 	document.getElementById('button-previous').disabled = true;
+	document.getElementById('button-next').setAttribute('onclick', "document.location.href = '#question-1';");
 }; 
 
 function visibilityQuestion() {
@@ -31,6 +32,7 @@ function visibilityQuestion() {
 			document.querySelector('.finishForm').classList.replace('invisible-finish', 'active-finish');
 			buttonStart_b.classList.replace('active-footer', 'invisible-footer');
 			test_el_next.classList.replace('active-question', 'invisible-question');
+			document.getElementById('button-next').setAttribute('onclick', "document.location.href = '#finishForm';");
 			console.log('больше вопросов нет => стоп');
 			return;
 		} 
@@ -40,6 +42,8 @@ function visibilityQuestion() {
 		};
 		// работает! В связке с слушателем изменений .checkAnswer, меняет видимость кнопки при переходе к следующему вопросу
 		$('#button-next').attr('disabled', true);
+		// передает заглушку с номером вопроса в строку URL
+		document.getElementById('button-next').setAttribute('onclick', "document.location.href = '#"+new_test_el_next+"';");
 		//isCheckedAnswers();
 		/*if ($('.active-question .checkAnswer').prop('checked')) {
 	    $('#button-next').attr('disabled', false);
