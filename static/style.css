@@ -1,0 +1,595 @@
+body {
+  max-width: 1000px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  font-family: 'Montserrat', sans-serif;
+  /*font-family: 'Playfair Display', serif;*/
+  flex-direction: column;
+  background-color: #f8f8f8;
+  /*border: 2px solid green;*/
+  /*position: absolute;*/
+  color: #4a4a4a;
+  font-size: 1em;
+  font-weight: 400;
+  line-height: 1.5;
+
+}
+
+h1 {
+    font-size: 2em;
+}
+
+h2 {
+    font-size: 1.5em;
+}
+
+h3 {
+    font-size: 1.17em;
+}
+
+.container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	background-color: #fff;
+	/*border: 2px solid yellow;*/
+}
+
+.quiz-container {
+  flex: 0 1 auto;
+  padding-bottom: 70px;
+  /*border: 2px solid blue;*/
+
+}
+
+.quiz-start-title {
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.2;
+  letter-spacing: normal;
+  margin-bottom: 1rem;
+  /*font-family: 'Playfair Display', serif;*/
+}
+
+.finish-title-subheader,
+.quiz-start-title-subheader {
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.33;
+  letter-spacing: normal;
+  margin-bottom: 1rem;
+  text-align: justify;
+  /*font-family: 'Playfair Display', serif;*/
+}
+
+.quiz-title-separator {
+  background: #e2e2e2;
+  margin: auto -15px;
+  height: 1px;
+  border: none;
+  display: block;
+  padding: 0;
+}
+
+.quiz-title {
+  font-size: 16px;
+  text-align: left;
+  display: flex;
+  align-items: flex-start;
+  line-height: 1.2;
+  color: #69748c;
+  font-weight: 500;
+  margin-bottom: 16px;
+}
+
+.finish-title,
+.question-title {
+  font-size: 22px;
+  color: #363636;
+  text-align: left;
+  margin: 12px 0 16px 0px!important;
+  line-height: 1.2;
+  font-weight: 500;
+}
+
+.finishForm {
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	/*border: 2px solid blue;*/
+}
+
+#postForm {
+	/*border: 2px solid red;*/
+	display: flex;
+	flex-direction: column;
+	align-items: stretch;
+  margin-top: 10px;
+  font-weight: 500;
+	/*justify-content: center;*/
+}
+#postForm label {
+  margin-bottom: 10px;
+}
+#postForm input {
+	/*border: 2px solid red;*/
+	display: inline-flex;
+	/*flex-direction: column;*/
+	/*align-items: flex-start;*/
+	/*justify-content: flex-start;*/
+  /*width: 150px;*/
+  border-radius: 5px;
+  border: solid 2px #b6b6b6;
+  opacity: .7;
+  margin-bottom: 10px;
+}
+
+#postForm span {
+
+}
+#button-start,
+#button-postForm {
+    min-height: 55px;
+    border-radius: 40px;
+    font-size: 18px!important;
+  animation: heartbeat 1.5s ease-in-out infinite both;
+  /*animation: rotate-scale-up-ver 0.65s linear both;*/
+  /*animation: slide-in-elliptic-bottom-fwd 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) 500ms both;*/
+}
+#button-postForm {
+  margin-top: 30px;
+}
+
+
+@media (min-width: 768px){
+  body {
+    height: 100vh;
+  }
+  .container {
+    margin: 10%;
+    box-sizing: border-box;
+    border: 5px solid transparent;
+    border-radius: 4px;
+    border-color: #e6e6e6;
+    box-shadow: 0 7px 15px 0 rgba(0,0,0,.15);
+  }
+  .quiz-container {
+    width: 760px;
+    height: 450px;
+    /*overflow: scroll;*/
+    overflow-x: hidden;
+  }
+  .startImg {
+    background: url('./image/krdmckjhyhk0gdhprpw1530.jpg') no-repeat 0 40%; 
+    background-size: cover;
+    z-index: 20;
+	}
+  .startImg>.container {
+    background: none;
+    border: none;
+    box-shadow: none;
+  }
+  .startImg:after {
+    position: absolute;
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100vh;
+    pointer-events: none;
+    z-index: 10;
+    background: linear-gradient(90deg,#272626,transparent);
+    opacity: 1;
+  }
+  .quiz-start {
+    /*height: 100vh;*/
+    background: none;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    z-index: 20;
+    overflow-x: visible;
+    left: 0;
+    right: 0;
+    /*border-right: 1px solid hsla(0,0%,100%,.16);*/
+    /*flex: none;*/
+    width: 45.66667%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: auto;
+    padding: 0rem .75rem 0rem 0rem;
+    /*text-align: left;*/
+    /*align-content: space-around;*/
+  }
+  .quiz-start-header {
+    /*bottom: 50%;*/
+    height: 100%;
+    align-items: flex-start;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    flex: 1 1 auto;
+    padding: 0rem 2rem;
+    text-align: left;
+  }
+  .quiz-start-title-separator {
+    width: 38px;
+    height: 3px;
+    margin-bottom: 1rem;
+    background-color: #fff;
+  }
+  .quiz-start-title {
+    font-size: 30px;
+    color: #fff;
+	text-align: left;
+  }
+  .quiz-start-title-subheader {
+    font-size: 18px;
+    color: #fff;
+  }
+  .quiz-title {
+    padding-left: 60px;
+  }
+  .question-title {
+    padding-left: 60px;
+  }
+  .quiz-footer {
+    z-index: 100;
+    margin-bottom: 20px;
+  }
+  #postForm {
+  	padding: 0px 60px;
+  }
+  #postForm input {
+  	/*margin-left: 60px;*/
+  }
+  .finish-title-subheader {
+    font-size: 16px;
+    color: #777b95;
+  }
+  .custom-checkbox,
+  .custom-radio {
+    display: inline-flex;
+    width: 35%;
+    padding: 10px 10px 10px 23px;
+    margin-left: 3rem;
+  }
+  .custom-checkbox:not(:disabled):not(:checked):hover,
+  .custom-radio:not(:disabled):not(:checked):hover {
+    /* падинг отвечает за рамку при выделении (нижняя сторона ниже верха, поэтому не семетрично!)*/
+    padding: 8px 8px 8px 23px;
+  }
+  #button-previous,
+  #button-next {
+    opacity: .7;
+    color: #fff;
+  }
+}
+
+@media (max-width: 767px) {
+	body {
+	  align-content: stretch;
+  	/*background-color: red;*/
+    background-color: #fff;
+  	height: 100%;
+	}
+  .container {
+    /*background-color: #f7f7f7;*/
+  }
+  .start-page__bg {
+    /*max-height: 40vh;*/
+    height: 40vh;
+    background: url('./image/p3lut26jhxjygozqm2nm.jpg') no-repeat 0 ;
+    background-size: cover;
+    background-position: 50%;
+    z-index: 1;
+    flex: 0 0 220px;
+    
+    /*overflow-y: no-content;*/
+    /*display: flex;*/
+  }  
+  .startImg>.container {
+    background: none;
+    border: none;
+    box-shadow: none;
+  }
+  .quiz-start {
+    position: absolute;
+    /*top: 30%;*/
+    /*bottom: 10vh;*/
+    top: 0;
+    bottom: 0;
+    z-index: 20;
+    overflow-x: visible;
+    left: 0;
+    right: 0;
+    /*border: 2px solid green;*/
+  }
+  .quiz-start-header {
+    /*height: 60vh;  */
+    /*padding: 0 1rem;*/
+    padding: 1.5rem 2rem;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    flex: 1 1 auto;
+    z-index: 20;
+    /*animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;*/
+    /*border: 2px solid red;*/
+  }
+  .quiz-start-title {
+    font-size: 26px;
+    color: #020202;
+    text-align: left;
+
+  }
+  .finish-title-subheader,
+  .quiz-start-title-subheader {
+    font-size: 16px;
+    color: #777b95;
+  } 
+  #button-start,
+  #button-postForm {
+    color: #fff;
+    white-space: normal;
+    width: 100%;
+  }
+  .quiz-main {
+    padding: 0 1rem;
+  }
+  #postForm {
+  	padding: 0rem 1.5rem 1.5rem 1.5rem;
+  }
+  .quiz-footer {
+  	position: fixed;
+  	/*position: absolute;*/
+  	bottom:0%;
+  	height: auto;
+  	z-index: 100;
+  	margin-bottom: 20px;
+  	/*flex: 0 0 auto;*/
+  }
+  .custom-checkbox,
+  .custom-radio {
+    display: flex;
+    justify-content: flex-start;
+    text-align: justify;
+    padding: 10px;
+  }
+  .custom-checkbox:not(:disabled):not(:checked):hover,
+  .custom-radio:not(:disabled):not(:checked):hover {
+    /* падинг отвечает за рамку при выделении (нижняя сторона ниже верха, поэтому не семетрично!)*/
+    padding: 8px;
+  }
+  #button-previous,
+  #button-next {
+    opacity: .7;
+    color: #fff;
+  }
+  #button-next {
+    /*min-width: 115px;*/
+  }
+}
+
+.active-question,
+.active-main,
+.active-finish,
+.active-footer {
+  display: block;
+}
+
+.invisible-question,
+.invisible-main,
+.invisible-finish,
+.invisible-footer {
+  display: none;
+}
+
+/*.questions-all {
+  display: flex;
+  flex-flow: row;
+}*/
+
+
+/* для элемента input c type="checkbox" */
+.checkAnswer {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+
+/* для элемента label, связанного с .custom-checkbox */
+.custom-checkbox>.nameAnswer,
+.custom-radio>.nameAnswer {
+  display: inline-flex;
+  align-items: center;
+  user-select: none;
+  padding: 8px;
+
+}
+
+/*label в вопросах*/
+.custom-checkbox,
+.custom-radio {
+  font-size: 20px;
+  /*text-align: justify;*/
+  border-radius: 5px;
+  border: solid 1px rgba(217,216,230,.55);
+  margin-bottom: 1rem;
+
+}
+
+
+
+/* создание в label псевдоэлемента before со следующими стилями */
+/*.custom-checkbox>span*/
+.nameAnswer::before {
+  content: '';
+  display: inline-flex;
+  width: 1em;
+  height: 1em;
+  flex-shrink: 0;
+  flex-grow: 0;
+  border: 1px solid #adb5bd;
+  border-radius: 0.25em;
+  margin-right: 30px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 50% 50%;
+  background-color: #e8e8e8;
+}
+
+.custom-radio>.nameAnswer::before {
+  border-radius: 50%;
+}
+
+/* стили при наведении курсора на checkbox */
+.checkAnswer:not(:disabled):not(:checked)+.nameAnswer:hover::before {
+  border-color: #1b9f2d80;
+}
+
+/* стили для активного чекбокса (при нажатии на него) */
+.checkAnswer:not(:disabled):active+.nameAnswer::before {
+  background-color: #1b9f2d80;
+  border-color: #1b9f2d80;
+}
+
+/* стили для чекбокса, находящегося в фокусе */
+.checkAnswer:focus+.nameAnswer::before {
+  box-shadow: 0 0 0 0.2rem #b3f2bc;
+}
+
+/* стили для чекбокса, находящегося в фокусе и не находящегося в состоянии checked */
+.checkAnswer:focus:not(:checked)+.nameAnswer::before {
+  border-color: #1b9f2d80;
+}
+
+/* стили для чекбокса, находящегося в состоянии checked */
+.checkAnswer:checked+.nameAnswer::before {
+  border-color: #1b9f2d;
+  background-color: #1b9f2d;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3e%3c/svg%3e");
+}
+
+/* стили для радиокнопки, находящейся в состоянии checked */
+.custom-radio>.checkAnswer:checked+.nameAnswer::before {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23fff'/%3e%3c/svg%3e");
+}
+
+
+/* стили для чекбокса, находящегося в состоянии disabled */
+.checkAnswer:disabled+.nameAnswer::before {
+  background-color: #e9ecef;
+}
+
+/* стили при наведении курсора на весь checkbox + label */
+.custom-checkbox:not(:disabled):not(:checked):hover,
+.custom-radio:not(:disabled):not(:checked):hover {
+  border: 2px solid #1b9f2d80;
+  border-radius: 0.25em; 
+}
+
+a.button8 {
+  display: inline-block;
+  color: white;
+  font-weight: 700;
+  text-decoration: none;
+  user-select: none;
+  padding: .5em 2em;
+  outline: none;
+  border: 2px solid;
+  border-radius: 1px;
+  transition: 0.2s;
+} 
+a.button8:hover { background: rgba(255,255,255,.2); }
+a.button8:active { background: white; }
+
+
+.knopka {
+  color: #fff; /* цвет текста */
+  text-decoration: none; /* убирать подчёркивание у ссылок */
+  user-select: none; /* убирать выделение текста */
+  background: rgb(212,75,56); /* фон кнопки */
+  padding: .7em 1.5em; /* отступ от текста */
+  outline: none; /* убирать контур в Mozilla */
+} 
+.knopka:hover { background: rgb(232,95,76); } /* при наведении курсора мышки */
+.knopka:active { background: rgb(152,15,0); } /* при нажатии */
+
+/*
+.c-button {
+    -webkit-writing-mode: horizontal-tb !important;
+    -webkit-appearance: button;
+    border-color: rgb(216, 216, 216) rgb(209, 209, 209) rgb(186, 186, 186);
+    border-style: solid;
+    border-width: 1px;
+    padding: 1px 7px 2px;
+    text-rendering: auto;
+    color: initial;
+    display: inline-block;
+    text-align: start;
+    margin: 0em;
+    font: 400 11px system-ui;
+} */
+
+.c-button {
+	/* обнуление стилей
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+    border: 0;
+    border-radius: 0;
+    background: #ccc;
+    */
+  /* синяя закругленная */
+  /*min-width: 100px;*/
+  font-family: inherit;
+  font-weight: 500;
+  appearance: none;
+  border: 0;
+  /*border-radius: 5px;*/
+  border-radius: 40px;
+  /*background: #4676d7;*/
+  background: #1b9f2d;
+  color: #fff;
+  /*padding: 8px 16px;*/
+  /*font-size: 1rem;*/
+  cursor: pointer;
+  font-size: 16px;
+  padding: 12px 30px;
+  white-space: normal;
+  height: 43px;
+  box-shadow: 0 7px 15px 5px rgba(0,0,0,.15);
+  /*animation: shake-bottom 0.8s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;*/
+  
+}
+
+/* отключенная кнопка*/
+.c-button[disabled],
+.c-button[disabled]:hover {
+  color: #d2d5db;
+  background: #6c7589;
+  cursor: not-allowed;
+  border-color: #dbdbdb;
+}
+
+
+/* при наведении курсора мышки */
+.c-button:hover {
+  background: #126d1f;
+  /*animation: shake-bottom 0.8s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;*/
+}
+
+/* при нажатии */
+.c-button:focus {
+  outline: none;
+  box-shadow: 0 0 0 4px #cbd6ee;
+}
+
